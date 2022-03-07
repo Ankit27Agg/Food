@@ -1,0 +1,404 @@
+@font-face{
+    font-family: poppins;
+    src: url(Poppins-Regular.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-size: 300;
+    color: #111;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(0, 0, 0, 0.3), rgba(0,0,0,0.4)), url(img/pexels-klaus-nielsen-6287236.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px black;
+}
+
+.content{
+    max-width: 900px;
+    text-align: center;
+}
+
+.content h2{
+    font-size: 5em;
+    color: white;
+}
+
+.content p{
+    font-size: 1em;
+    color: white;
+}
+
+.btn{
+    font-size: 1em;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.btn:hover{
+    letter-spacing: 6px;
+    border-radius: 15px;
+    background-color: rgb(250, 214, 12);
+    color: black;
+    font-weight: 800;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky{
+    background-color: #fff;
+    padding: 10px 100px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo{
+    font-weight: 700;
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo{
+    color: #111;
+}
+
+header .logo span{
+    color: red;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a{
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+header .navigation li a:hover{
+    color: red;
+}
+
+header.sticky .navigation li a{
+    color: #111;
+}
+header.sticky .navigation li a:hover{
+    color: red;
+}
+
+section{
+    padding: 100px;
+}
+
+.about{
+    background-color:  rgba(243, 241, 241, 0.884);
+}
+.row{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgba(138, 133, 133); */
+}
+
+.row .col50{
+    position: relative;
+    width: 50%;
+    margin: 40px;
+}
+
+.titleText{
+    font-size: 2em;
+    font-weight: 300;
+    color: #111;
+}
+
+.titleText span{
+    color: red;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* .col51 .imgBx{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.col51 .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* object-fit: cover; */
+    /* height: 100%;
+    width: 100%;
+}  */
+.col51 .imgBx{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.col51 .imgBx img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: contain;
+}
+
+.title{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .content{
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.menu .content .box{
+    width:340px;
+    margin: 40px;
+    border: 15px solid #fff;
+    transition: 0.5s;
+    box-shadow: 0 5px 30px rgba(197, 196, 196, 0.8);
+}
+.menu .content .box:hover{
+    box-shadow: 0 30px 30px rgba(34, 33, 33, 0.8);
+    width: 350px;
+}
+
+.menu .content .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .content .box .imgBx img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu .content .box .text{
+    padding: 15px 0 5px;
+}
+.menu .content .box .text h3{
+    font-weight: 400;
+    color: #111;
+}
+
+.expert .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    margin-right: 10px;
+    max-width: 100%;
+    background-color:rgb(173, 80, 17);
+
+}
+
+.expert .content .box{
+    margin: 30px;
+    width: 250px;
+    transition: 0.5s;
+    box-shadow: 0 50px 40px rgba(34, 33, 33, 0.8);
+    border: 10px solid white;
+    opacity: 1;
+}
+.expert .content .box:hover{
+    border: 11px solid rgb(255, 217, 0);
+    box-shadow: 0 10px 40px rgba(190, 164, 13, 0.589);
+    
+}
+  
+.expert .content .box .imgBx{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transition: 0.7s;
+}
+
+.expert .content .box .imgBx img{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.expert .content .box .text{
+    padding: 10px 0 3px;
+}
+.expert .content .box .text h3{
+    font-weight: 400;
+    color: #fff;
+}
+
+.video1{
+    background-color: rgb(238, 187, 178);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.video2{
+    border: 15px solid white;
+    object-fit: cover;
+    margin: 0 50px;
+}
+
+.testimonialtext{
+    margin: 10px 100px;
+    margin-top: 100px;
+    color: white;
+}
+.testimonialtext .text1{
+    color: white;
+    text-align: center;
+}
+
+.testimonialtext .text2
+{
+    color: black;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
+@media (max-width: 991px){
+    .headerClass.active{
+        background-color: black;
+        color: white;
+    }
+    header, header.sticky{
+        padding: 20px 60px;
+    }
+    
+    header .navigation{
+        display: none;
+    }
+
+    .toggleMenu{
+        position: relative;
+        height: 40px;
+        width: 40px;
+        background: url(img/ellipsis-removebg-preview.png);
+        background-size: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .toggleMenu.active{
+        background: url('img/cross.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    header.sticky .toggleMenu{
+        filter: invert(1);
+    }
+
+    header.sticky.active .logo{
+        color: white;
+    }
+
+    header .navigation.active{
+        height: calc(100% - 85px);
+        width: 100%;
+        position: fixed;
+        top: 85px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        color: black;
+    }
+    header .navigation li {
+        list-style: none;
+        margin-left: 0px;
+    }
+    header .navigation li a {
+        color: black;
+        color: rgb(34 33 33 / 80%);
+        font-weight: 300;
+        text-decoration: none;
+        transition: all 0.5s;
+        font-size: 1.6em;
+    }
+
+    section {
+        padding: 20px;
+    }
+    .content h2 {
+        font-size: 3em;
+        color: white;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row .col50 {
+        position: relative;
+        width: 97%;
+        margin: 40px;
+    }
+    .col51 .imgBx {
+        position: relative;
+        height: 25em;
+        width: 100%;
+    }
+}
